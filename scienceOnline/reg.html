@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>注册蔷薇</title>
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/login.css"/>
+    <link rel="stylesheet" href="/css/animate.css"/>
+		<script type='text/javascript' src='/js/libs/jquery.js'></script>
+		<script type='text/javascript' src='/js/reg.js'></script>
+</head>
+<body>
+
+<div class="container font-hei">
+    <div class="heading">
+        <h1 class="font-kai text-center text-danger title">Telanx</h1>
+
+        <h2 class="font-kai text-center text-muted">
+            往前一步，海阔天空
+        </h2>
+    </div>
+		
+		
+		<form name="login" class="login step ng-scope ng-dirty ng-valid ng-valid-required" ng-submit="doLogin()" novalidate="">
+    <div class="form-group has-success" form-state="login.name">
+        
+        <label>账号</label>
+        <input name="user" class="form-control input-lg font-kai ng-pristine ng-valid ng-valid-required" type="text" placeholder="请输入 账号" >
+        <a class="form-control-feedback glyphicon glyphicon-ok"></a>
+    </div>
+
+    <div class="form-group has-success" form-state="login.password">
+        <div class="errors invisible">
+        </div>
+        <label>密码</label>
+        <input name="pwd" type="password" class="form-control input-lg font-kai ng-isolate-scope ng-valid-minlength ng-dirty ng-valid ng-valid-required ng-valid-mismatch" placeholder="请输入密码" ng-model="password" focus-bind="focuses.password" ng-disabled="disableInputs" ng-change="login.password.$setValidity('mismatch', true)" required="" ng-minlength="6" style="">
+    </div>
+		
+		 <div class="form-group has-success" form-state="login.password">
+        <div class="errors invisible">
+        </div>
+        <label>验证码</label>
+        <div style='height:45px'>
+					<input name="vcode" type="text" class="form-control input-lg" style='width:150px;float:left' maxlength=4>
+					<img id='vcode' width='150px' height='35px' style='float:left'>
+				</div>
+    </div>
+
+    <button class="btn btn-block btn-primary btn-lg btn-submit">
+        <span >注册</span>
+    </button>
+    <a href="login.html">返回登录</a>
+		
+		<!---显示登录结果状态--->
+	</form>
+    
+
+    <p class="small text-muted text-center tip">如有问题，请联系QQ 1241818518</p>
+</div>
+<div class="mask-tips">
+
+</div>
+</body>
+</html>

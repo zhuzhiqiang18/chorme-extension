@@ -1,0 +1,26 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "img/logo.png",
+      "default_popup": "popup.html",
+      "default_title": "蔷薇"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval' http://127.0.0.1 https://ssl.google-analytics.com; object-src 'self';",
+   "description": "最简单易用的科学上网服务，为国际化的互联网工作者量身打造，一键将网站加入白名单即可。无繁琐配置(无需：goAgent/ShadowSocks/Proxy Switchysharp/VPN/自己搭代理服务器)，即装即用。",
+   "icons": {
+      "128": "img/logo.png",
+      "16": "img/logo.png",
+      "48": "img/logo.png",
+      "64": "img/logo.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiKBzhnOHEgAY6fQA1Rp5KRDF+bLOK5uNf0IoI4gOU9CVPVrvSq15V4cJVGstBihtlLSDnVFTxjOGur0D4vI3tHHmLn2JsZwnC2wXq08W1y6S+mTXLGg/OG6SEjtRtedH9ozzrEEjWBw2TsIc/1/i/XV7bQMO5/iVL47gHtcymhotIz4ZsCWcot5z4miA36WyhqPxFhh7XEa5JmfkWWSvFkOWYsQ/NzDdNYEKDAf0D1xw7PTta8HfNQCW9Zw27sdGxyNIKwEi9WEeR3c1sFjkhogXw3WfAMR+X+kNoVKTSFzJfHwRgwcpYj0XCj7IzOUbK6E2oBeAVkEntpLa2tMJUQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "22.0.0",
+   "name": "蔷薇",
+   "options_page": "options.html",
+   "permissions": [ "management", "proxy", "idle", "tabs", "cookies", "notifications", "webRequest", "webRequestBlocking", "http://*/", "https://*/" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "4.2"
+}

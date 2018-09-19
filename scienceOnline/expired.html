@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Telanx</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+		<style type='text/css'>
+		*,body {
+			margin:0;
+			padding:0;
+		}
+		body{
+			font-family:'微软雅黑';
+			width:250px;
+			height:250px;
+		}
+	
+		.head img{
+			width:35px;
+			height:35px;
+			margin:10px 0 10px 0;
+		}
+		
+		
+		.content{
+			border-top:dashed 1px #aaa;
+			border-bottom:dashed 1px #aaa;
+			padding:10px 5px;
+		}
+		.content div{
+			margin:10px 0;
+		}
+		.content .recharge{
+			text-align:right;
+		}
+		.footer{
+			background:rgb(91,192,222);
+			color:#fff;
+		}
+		
+	</style>
+	<script type='text/javascript' src='/js/libs/jquery.js'></script>
+	<script type='text/javascript' src='/js/expired.js'></script>
+</head>
+<body>
+<div class="head text-center">
+	<img src="/img/logo.png">
+</div>
+
+<div class="content">
+	<div class="expiredWarning">
+		<button class="btn btn-block btn-warning">您的账号已于<span class="expireDate">1970-07-01</span>过期！</button>
+	</div>
+	<div class="recharge"><button class="btn btn-success">充值</button></div>
+	<hr>
+	<div class="account text-center">
+		<a href="options.html" target="_blank"><span class="glyphicon glyphicon-cog">个人中心</span></a>
+	</div>
+</div>
+
+<div class="footer text-center">
+	<span class="crx"></span>
+</div>
+<!-----------广告>商务合作请联系QQ1241818518----->
+</body>
+</html>

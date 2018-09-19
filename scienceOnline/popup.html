@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>蔷薇</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/popup.css" rel="stylesheet">
+		<style type='text/css'>
+		html,body {
+			margin:0;
+			padding:0;
+			font-family: "Microsoft Yahei","Helvetica Neue",Helvetica Neue,Helvetica,Lantinghei SC,Hiragino Sans GB,sans-serif;
+		}
+		 .mask{
+			 display:none;
+			 background:rgba(0,0,0,0.8);
+			 position:fixed;
+			 top:0;
+			 width:100%;
+			 height:100%;
+			 color:rgb(229,62,29);
+			 padding-top:30%;
+			 text-align:center;
+			 font-family:"微软雅黑"
+		 }
+		 .node{
+				width:100%;
+				height:40px;
+				border:1px solid #aaa;
+				border-radius:4px;
+				padding:5px;
+				cursor: pointer;
+		 }
+		 .node:hover{
+				box-shadow:0 1px 10px rgb(50,118,177);
+		 }
+		 .node div{
+				height:27px;
+				float:left;
+				line-height:25px;
+				padding:1px 0;
+				margin:0 10px;
+		 }
+		 
+		 .node img,.nodesel img{
+			width: 25px;
+			height: 25px;
+		 }
+		 
+		 .node .changeIp {
+				float:right;
+		 }
+			.footer{
+				margin:10px 0 0 0;
+				text-align:right;
+			}
+
+	.wrap{
+		width:250px;
+		overflow:hidden;
+	}
+	#slidepage{
+		width:500px;
+		overflow:hidden;
+	}
+	#slidepage>.page{
+		padding:0 5px;
+		width:250px;
+		float:left;
+	}
+	#slidepage>.mainpage{
+	}
+	.mainpage .settings{
+		height:40px;
+		line-height:40px;
+		box-shadow:0 1px -1px #aaa;
+	}
+	
+	#slidepage>.subpage{
+		padding:0 5px;
+	}
+	
+	.subpage .header{
+		border-bottom:1px solid #aaa;
+		padding:10px 0 0 0;
+		height:40px;
+	}
+	.subpage .backhome{
+		color:#aaa;
+		cursor:pointer;
+		width:20px;
+		float:left;
+	}
+	.subpage .backhome:hover{
+		color:#000;
+	}
+	.subpage .title{
+		color:#aaa;
+		width:200px;
+		float:left;
+		text-align:center;
+	}
+	.subpage .refresh{
+		color:#aaa;
+		width:20px;
+		float:right;
+		cursor:pointer;
+	}
+	.subpage .refresh:hover{
+		color:#000;
+	}
+	
+	
+	.subpage ul{
+		min-height:150px;
+	}
+	.subpage .nodelist li{
+		list-style:none;
+		padding:0 5px;
+		height:30px;
+		line-height:30px;
+		box-shadow:#aaa 1px -1px 1px;
+	}
+	.nodelist li:hover{
+		background:rgb(235,235,235);
+	}
+	.subpage .nodesel{
+		cursor:pointer;
+	}
+	
+	.nodelist .proxy:not(.selected){
+		cursor:pointer;
+	}
+	.nodelist .proxy:not(.selected):hover{
+		background-color: #ebebeb;
+    border-color: #adadad;
+	}
+	.nodelist .flag{
+		float:left;
+	}
+	.nodelist .locate{
+		height:30px;
+		line-height:30px;
+	}
+	.nodelist .selected{
+		color:#fff;
+		background-color: #428bca;
+    border-color: #357ebd;
+	}
+
+	.qw-header {
+		margin-top: 10px;
+		text-align: center;
+		font-size: 12px;
+		line-height: 20px;
+	}
+	.text-gray {
+		color: #aaa;
+	}
+	.qw-switch {
+		margin: 10px 0;
+	}
+	.qw-switch-btn {
+		margin-top: 5px;
+	}
+	</style>
+		<script type='text/javascript' src='/js/libs/jquery.js'></script>
+		<script type='text/javascript' src='/js/libs/popup.js'></script>
+		<script src="/js/popup.js"></script>
+</head>
+<body>
+<div class="wrap">
+<div id="slidepage">
+	<div class="page mainpage">
+		<div class="qw-header text-gray">蔷薇 4.1</div>
+		<hr>
+		<div class="row qw-switch">
+			<div class="col-xs-3 text-gray">科学上网</div>
+			<div class="col-xs-8">
+				<div class="modes btn-group btn-group-justified btn-group-sm qw-switch-btn">
+					<a href="#" class="btn btn-default  mode-switch" data-id='always'>打开</a>
+					<a href="#" class="btn btn-default  mode-switch" data-id='close'>关闭</a>
+			</div>
+			</div>
+		</div>
+		
+		<hr/>
+		
+		<span class="section-title text-gray">代理服务器</span>
+		<div class="node">
+			<div class="flag"><img src="/img/flags/other.png"></div>
+			<div class="locate">地区</div>
+			<div class="ip" hidden>127.0.0.1</div>
+			<div class="changeIp">切换<span class="glyphicon glyphicon-chevron-right"></span></div>
+		</div>
+		
+		
+		<hr/>
+		<div class="settings text-center">
+			  
+					<span class='glyphicon glyphicon-cog'>强子破解</span>
+				
+		</div>
+		<div class="tryTips text-center hidden">
+			*强子特别破解*<br/>
+			<h2 class="leftTime text-danger">请购买正版</h2>
+		</div>
+		<!---主页内容结束--->
+	</div>
+	<div class="page subpage">
+		<div class="nodelist">
+			<div class="header">
+				<div class="backhome"><span class="glyphicon glyphicon-chevron-left"></span></div>
+				<div class="title">线路选择</div>
+				<div class="refresh"><span class="glyphicon glyphicon-refresh"></span></div>
+			</div>
+				<table class="table">
+				<thead>
+					<tr class="th">
+						 <th>序号</th>
+						 <th>节点</th>
+						 <th>状态</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+					
+				</tbody>
+				</table>
+			
+			
+		</div>
+		<div class="proxyStatus"><font color="#00f">状态</font> ：<span class='status'></span></div>
+	</div>
+</div>
+</div>
+
+<!-----------广告>商务合作请联系QQ1241818518----->
+
+<!---插件服务器挂掉时给的提示服务！--->
+<div class="mask">
+	<p style="margin-bottom:60px;color:#ff0;">插件异常，请重启浏览器后重试！</p>
+	<p>官方网站<a href="https://qwvpn.github.io" target="_blank">https://qwvpn.github.io</a></p>
+	<p>2015~2017©蔷薇|Telanx</p>
+</div>
+</body>
+</html>

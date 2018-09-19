@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>用户登录|注册</title>
+	<link rel="stylesheet" href="/css/bootstrap.css"/>
+	<link rel="stylesheet" href="/css/login.css"/>
+	<link rel="stylesheet" href="/css/animate.css"/>
+	<style type='text/css'>
+	.logo{
+		float:left;
+	}
+	.logo img{
+		width:83px;
+		height:83px;
+	}
+	</style>
+	<script type='text/javascript' src='/js/libs/jquery.js'></script>
+	<script type='text/javascript' src='/js/index.js'></script>
+</head>
+<body>
+<div class="container font-hei">
+	<div class="heading">
+		
+		<h1 class="font-kai text-center text-danger title">
+		Telanx
+		</h1>
+		<h2 class="font-kai text-center text-muted">
+			往前一步，海阔天空
+		</h2>
+	</div>
+	<form name="account" class="account step" >
+    <div class="form-group has-error">
+      <div class="errorshow" style='float:right'>
+				<span class="error"></span>
+      </div>
+			<label>账号</label>
+			<input name="user" type="text" placeholder="请输入 账号" class="form-control font-kai input-lg">
+			<button class="btn btn-block btn-info btn-lg">
+				<span class="">注册 | 登录</span>
+			</button>
+    </div>
+</form>
+
+<div class="alert alert-warning animated bounce">
+请先登录 或 注册账号（直接输入邮箱/手机号）
+</div>
+	<p class="small text-muted text-center tip">如有问题，请联系QQ 1241818518</p>
+</div>
+</body>
+</html>

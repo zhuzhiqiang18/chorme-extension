@@ -1,0 +1,539 @@
+<html>
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title class="ng-binding">Telanx|用户中心</title>
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_461807_29cg6het30tnvcxr.css">
+    <link rel="stylesheet" href="/css/options.css"/>
+    <link rel="stylesheet" href="/css/animate.css"/>
+		<style type="text/css">
+		 .mask{
+			 display:none;
+			 background:rgba(0,0,0,0.8);
+			 position:fixed;
+			 top:0;
+			 width:100%;
+			 height:100%;
+			 color:#fff;
+			 padding-top:20%;
+			 text-align:center;
+			 z-index:999;
+			 font-family:"微软雅黑"
+		 }
+		 .mask .bottom{
+				position:absolute;
+				bottom:20;
+				left:44%;
+		 }
+		 .row{
+			display:flex;
+		 }
+		 .plans {
+			padding: 20px 40px;
+		 }
+		 .x4 {
+    width: 33.33333333%;
+}
+.card {
+  border-radius: 5px;
+  background-image: url("/static/img/pay/bigstripe.png");
+  background-repeat: no-repeat;
+  padding: 5px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+.card {
+    background-image: url("/static/img/pay/bigstripe@2x.png");
+    background-size: 68px 80px;
+  }
+}
+.card h3 {
+  font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, "TW\-Kai", serif;
+  font-size: 30px;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  margin: 0;
+  text-shadow: 0 -1px 0 rgba(1, 1, 1, 0.5);
+}
+.card .corner {
+  float: right;
+  width: 67px;
+  height: 71px;
+  background-image: url("/static/img/pay/coner.png");
+  margin-right: -5px;
+  margin-top: -5px;
+  margin-left: -67px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+ .card .corner {
+    background-image: url("/static/img/pay/coner@2x.png");
+    background-size: 67px 71px;
+  }
+}
+.card .body {
+  background-color: white;
+  border-radius: 5px;
+}
+.card .body .price-box {
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px 5px 0 0;
+  background-color: #f5f5f5;
+  background-image: url('/static/img/pay/noise_price.jpg');
+  border-bottom: 1px solid #c5c5c5;
+  padding: 10px;
+  margin-bottom: 35px;
+  text-align: center;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+.card .body .price-box {
+    background-image: url("/static/img/pay/noise_price@2x.jpg");
+    background-size: 15px 15px;
+  }
+}
+.card .body .price-box .price {
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+  font-size: 72px;
+  text-align: center;
+  padding-right: 20px;
+}
+.card .body .price-box .price small {
+  width: 20px;
+  float: left;
+  font-size: 14px;
+  margin-top: 25px;
+}
+.card .body .price-box .duration {
+  font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, "TW\-Kai", serif;
+  font-size: 18px;
+  width: 120px;
+  margin: 0 auto;
+  background-color: #ededed;
+  padding: 3px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+}
+.card .body .price-box .pay.btn {
+  font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, "TW\-Kai", serif;
+  font-size: 20px;
+  line-height: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 50px;
+  margin-bottom: -34px;
+  color: white;
+  border-width: 0;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.card .body ul.features {
+  list-style: none;
+  margin: 40px auto 0 auto;
+  width: 200px;
+}
+.card .body ul.features li {
+  line-height: 25px;
+}
+.card .body ul.features li .fa {
+  width: 20px;
+}
+ .card.green {
+  background-color: #2ca410;
+}
+.card.green .pay.btn {
+  background-color: #2ca410;
+}
+.card.green .pay.btn:hover {
+  background-color: #34b513;
+}
+.card.green li i {
+  color: #2ca410;
+}
+.card.red {
+  background-color: #c92115;
+}
+.card.red .pay.btn {
+  background-color: #c92115;
+}
+.card.red .pay.btn:hover {
+  background-color: #e02316;
+}
+.card.red li.important {
+  color: #c92115;
+}
+.card.red li i {
+  color: #c92115;
+}
+.card.blue {
+  background-color: #0e7caa;
+}
+.card.blue .pay.btn {
+  background-color: #0e7caa;
+}
+ .card.blue .pay.btn:hover {
+  background-color: #118ec2;
+}
+ .card.blue li.important {
+  color: #0e7caa;
+}
+.card.blue li i {
+  color: #0e7caa;
+}
+.card.suggested {
+  position: relative;
+  //z-index: 20;
+  margin-top: 17px !important;
+  margin-left: -35px !important;
+  margin-right: -35px !important;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+.card.suggested h3 {
+  line-height: 70px;
+  font-size: 35px;
+}
+.card.suggested .body .price {
+  font-size: 88px !important;
+}
+ .card.suggested .body .pay.btn {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+ .card.suggested .body .features {
+  padding-bottom: 10px;
+}
+ .col-xs-4 .card {
+  margin: 50px -20px 0 -20px;
+}
+
+.order-list>tbody {
+	overflow-y: scroll;
+}
+
+.contact-box {
+	font-size: 17px;
+	background: rgb(245,245,245);
+	margin: 0 15px;
+}
+.contact-box .right {
+	padding-top: 30px;
+}
+.contact-box .title {
+	color: #aaa;
+}
+.contact-box .value {
+	color: #000;
+	line-height:40px;
+}
+blockquote {
+ font-size: 14px;
+}
+.carousel-inner {
+	margin-top: 20px;
+	background: rgb(91,192,222);
+	color: #fff;
+}
+.item .img {
+	float: left;
+	width: 400px;
+}
+.item h3{
+	line-height: 35px;
+}
+		</style>
+		<script type='text/javascript' src='/js/libs/jquery.js'></script>
+		<script type='text/javascript' src='/js/libs/bootstrap.min.js'></script>
+		<script type='text/javascript' src='/js/libs/popup.js'></script>
+		<script type='text/javascript' src='/js/options.js'></script>
+	</head>
+<body>
+<div class="container">
+	<div class="row ng-scope">
+    <div class="nav-col col-xs-3">
+      <h1><span class='crxName'>Telanx</span>
+				<small class="ng-binding"><span class='crxVersion'>1.0</span></small>
+      </h1>	 
+      <hr>
+			<div class="ng-scope">
+				<div class="profile panel panel-default">
+            <div class="panel-body">
+              <div class="role role-expired">
+								<!---<img src="" >-->
+							</div>
+                    <div class="info">
+                        <span class="user name"></span>
+                       <a target="_blank" id='isExpired' class="payUrl btn btn-xs">VIP已过期</a>
+                    </div>
+                </div>
+				<div class="panel-footer">
+                    <button target="_blank" class="btn btn-danger btn-block ng-scope logout">退 出</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-menu list-group">
+            <a href="#/how-to-use" class="list-group-item selected">
+                首页
+            </a>
+			<a href="#/recharge" class="list-group-item">
+                充值续费
+            </a>
+            <a href="#/trades" class="list-group-item">
+                历史订单
+            </a>
+            <a href="#/contact" class="list-group-item">
+                联系我们
+            </a>
+            
+        </div>
+
+    </div>
+    <div class="main-col col-xs-9">
+
+       
+				
+				<div class="alert alert-warning alert-dismissible" id='updateInfo' role="alert" hidden>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<strong>提示：</strong><span class="updateInfo"></span><a href=# target='_blank' class="updateUrl">立即更新</a>
+				</div>
+        <div class='content how-to-use'>
+			<div class="banner">
+			<div id="myCarousel" class="carousel slide">
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>   
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="img"><img src="/img/global.png" style="max-width: 450px;height: 282px" alt="First slide"></div>
+			<h1>稳定</h1>
+			<h3>多个节点，以备您的不时之需。</h3>
+        </div>
+        <div class="item">
+            <div class="img">
+				<img src="/img/sites.png" style="max-width: 450px;height: 282px" alt="Second slide">
+			</div>
+			<h1>方便</h1>
+			<h3>省去繁杂操作，只需2步即可轻松上网。</h3>
+        </div>
+        <div class="item">
+            <div class="img"><img src="/img/autoproxy.png" style="max-width: 450px;height: 282px" alt="Third slide"></div>
+			<h1>快速</h1>
+			<h3>无论是google，facebook,twitter，还是youtube，都会给您以顺畅体验。</h3>
+        </div>
+    </div>
+    <!-- 轮播（Carousel）导航 -->
+    <a class="carousel-control left" href="#myCarousel" 
+        data-slide="prev">&lsaquo;
+    </a>
+    <a class="carousel-control right" href="#myCarousel" 
+        data-slide="next">&rsaquo;
+    </a>
+</div>
+			
+</div>
+
+				<div class="page-header ng-scope">
+					<h2></h2>
+
+					<div class="sort dropdown pull-right right">
+					</div>
+
+					<div class="clearfix"></div>
+				</div>
+				<div class="faq-title label label-warning">如何使用</div>
+				<div class="faqs" style="padding-top:20px">
+					1.点击插件图标(一般在浏览器上方)，选择一个代理节点。<br/>2.返回插件开关，点击打开即可。<br/>
+					怎么样，是不是很简单呢~
+				</div>
+				<br/ >
+				<div class="faq-title label label-warning">常见问题FAQ</div>
+				<div class="faqs" style="padding-top:20px">
+					<blockquote class="border-blue">
+						<p class="text-warning">Q:谷歌Chrome浏览器显示插件已损坏，无法启用?</p>
+						<p>A:由于谷歌浏览器限制，非商店外扩展使用一段时间后会自动禁用。</p>
+						<p>解决办法:<br/>
+						1.改用其他浏览器比如UC，360，猎豹等。<br/>
+						2.参考此篇文章
+							<a href="https://jingyan.baidu.com/article/0f5fb099cbe5486d8334ea2c.html" target="_blank">《如何解决谷歌Chrome浏览器第三方扩展程序已停用》</a>
+						</p>
+					</blockquote>
+					<blockquote class="border-red">
+						<p class="text-warning">Q:插件打开无效果？</p>
+						<p>A:如果您安装有同类型插件，建议您先禁用其它类型插件后再使用。</p>
+						<p>关闭插件情况下是否能上网？如能，切换不同节点试试看。</p>
+					</blockquote>
+				</div>
+					
+		</div>
+					<!---domains content END-->
+				<div class="content recharge" hidden>
+					<div class="page-header ng-scope">
+						<h2>充值套餐</h2>
+						<div class="sort dropdown pull-right right"></div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="plans row">
+					  <div class="x4">
+						<div class="card green">
+						  <h3>季度会员</h3>
+						  <div class="body">
+							<div class="price-box">
+							  <div class="price ng-binding"><small>￥</small>35
+							  </div>
+							  <div class="duration">3个月</div><a href="#" class="pay btn btn-default" data-type="1">立即购买</a>
+							</div>
+							<ul class="features">
+							  <li><i class="fa fa-check"></i><span tooltip="可将任何网站加入规则列表" class="ng-scope">不限制使用的域名</span>
+							  </li>
+							  <li><i class="fa fa-check"></i><span tooltip="开启后，上任何网站都使用红杏" class="ng-scope">开放“一直”模式</span>
+							  </li>
+							  <li>&nbsp;</li>
+							  <li>&nbsp;</li>
+							</ul>
+						  </div>
+						</div>
+					  </div>
+					  <div class="x4">
+						<div class="card red suggested">
+						  <div class="corner"></div>
+						  <h3>年费会员</h3>
+						  <div class="body">
+							<div class="price-box">
+							  <div class="price ng-binding"><small>￥</small>110
+							  </div>
+							  <div class="duration">360天</div><a href="#" class="pay btn btn-default" data-type="2">立即购买</a>
+							</div>
+							<ul class="features">
+							  <li><i class="fa fa-check"></i><span tooltip="可将任何网站加入规则列表" class="ng-scope">不限制使用的域名</span>
+							  </li>
+							  <li><i class="fa fa-check"></i><span tooltip="开启后，上任何网站都使用红杏" class="ng-scope">开放“一直”模式</span>
+							  </li>
+							  <li class="important"><i class="fa fa-check"></i><span tooltip="严格限定单台服务器用户数，保证服务器有大量的空闲带宽" class="ng-scope">限量专属服务器</span>
+							  </li>
+							  <li>&nbsp;</li>
+							</ul>
+						  </div>
+						</div>
+					  </div>
+					  <div class="x4">
+						<div class="card blue">
+						  <h3>月费会员</h3>
+						  <div class="body">
+							<div class="price-box">
+							  <div class="price ng-binding"><small>￥</small>15
+							  </div>
+							  <div class="duration">30天</div><a href="#" class="pay btn btn-default" data-type="3">立即购买</a>
+							</div>
+							<ul class="features">
+							  <li><i class="fa fa-check"></i><span tooltip="可将任何网站加入规则列表" class="ng-scope">不限制使用的域名</span>
+							  </li>
+							  <li><i class="fa fa-check"></i><span tooltip="开启后，上任何网站都使用红杏" class="ng-scope">开放“一直”模式</span>
+							  </li>
+							  <li class="important"><i class="fa fa-check"></i><span tooltip="严格限定单台服务器用户数，保证服务器有大量的空闲带宽" class="ng-scope">限量专属服务器</span>
+							  </li>
+							  <li>&nbsp;</li>
+							</ul>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<hr>
+					<div class="tips">
+						<p class="text-muted">注:暂不支持自助充值，请联系客服QQ/微信<b class="text-danger">1241818518</b>进行充值或试用~</p>
+					</div>
+				</div>
+				<!--order content START-->
+				<div class='content order' hidden>
+					<div class="page-header ng-scope">
+					<h2>我的订单记录</h2>
+					<div class="bs-example order-list">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>时间</th>
+									<th>套餐类型</th>
+									<th>充值金额</th>
+									<th>订单号</th>
+									
+									<th>备注</th>
+								</tr>
+							</thead>
+							<tbody>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!--order content END-->
+				
+				
+				
+				
+				
+			</div>
+			<!--blog content start-->
+			<div class='content contact' hidden>
+				<div class="page-header ng-scope">
+					<h2>联系我们</h2>
+
+					<div class="sort dropdown pull-right right">
+					</div>
+
+					<div class="clearfix"></div>
+				</div>
+				<div class="row">
+					<div class="col-xs-6 contact-box">
+						<div class="row">
+							<div class="col-sm-4">
+								<i class="iconfont icon-QQqun" style="font-size: 90px;color: #20a0ff;"></i>
+							</div>
+							<div class="col-sm-8 right">
+								<div class="title">QQ群</div>
+								<div class="value">527713442</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 contact-box">
+						<div class="row">
+							<div class="col-xs-4">
+								<i class="iconfont icon-huaban" style="font-size: 90px;color: #20a0ff;"></i>
+							</div>
+							<div class="col-xs-8 right">
+								<div class="title">官方网站</div>
+								<div class="value">https://qwvpn.github.io</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+</div>
+</div>		
+<!---modal  start--->
+<div class="modal fade bs-example-modal-sm in" id='myModal' tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" style="display:none; padding-right: 17px;">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h4 class="modal-title">提示</h4>
+        </div>
+        <div class="modal-body">
+          <div class="alert updateInfo">合作联系：QQ1241818518</div>
+					<a href="http://oo22.taobao.com" target="_blank" class="updateUrl btn btn-block btn-primary">立即升级</a>
+        </div>
+      </div>
+    </div>
+</div>
+<!--modal  END  --->
+<div class='mask'>
+	<p class='msg'>正在加载配置中，请稍后。。。。</p>
+	<p class="bottom">Powered By Telanx|2015~2017 蔷薇</p>
+</div>
+	</body>
+</html>
